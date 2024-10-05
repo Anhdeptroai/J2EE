@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Quản Lý</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- CDN bootstrap MDB -->
@@ -45,16 +45,26 @@
         <!-- Sidebar -->
         <nav class="col-md-2 d-none d-md-block sidebar">
             <div class="sidebar-sticky">
-                <h5 class="text-white mt-3 mb-3 text-center"><a href="homepage">Dashboard</a></h5>
+                <h5 class="text-white mt-3 mb-3 text-center"><a href="homepage">Bảng điều khiển</a></h5>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link active" href="#" data-toggle="collapse" data-target="#homeMenu" aria-expanded="false" aria-controls="homeMenu">
-                            Quản lý các trang<i style="margin-left: 4px" class="fa-solid fa-caret-down"></i>
+                            Quản lý nội dung<i style="margin-left: 4px" class="fa-solid fa-caret-down"></i>
                         </a>
                         <div class="collapse" id="homeMenu">
                             <ul class="nav flex-column ml-3">
                                 <li class="nav-item">
-                                    <a href="#" onclick="loadIframe('orders')" class="nav-link nav-decor">Trang chủ</a>
+                                    <a href="#" onclick="loadIframe('dashboard_programmanagement')" class="nav-link nav-decor">Quản lý chương trình</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" onclick="loadIframe('dashboard_articlemanagement')" class="nav-link nav-decor">Quản lý nội dung bài viết</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse" id="homeMenu_1">
+                            <ul class="nav flex-column ml-3">
+                                <li class="nav-item">
+                                    <a href="#" onclick="loadIframe('dashboard_programmanagement')" class="nav-link nav-decor">Quản lý danh mục</a>
                                 </li>
                             </ul>
                         </div>
@@ -127,7 +137,7 @@
         <!-- Main content -->
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">THPT Phạm Văn Sáng</h1>
+                <h1 class="h2">Hệ Thống Quyên Góp Qũy Mặt Trời</h1>
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
                         <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -155,7 +165,7 @@
     }
 
     document.addEventListener("DOMContentLoaded", function() {
-        loadIframe('account_dashboard');
+        loadIframe('dashboard_programmanagement');
 
         // Tự động mở rộng phần "Quản lý tài khoản"
         var homeMenu = document.getElementById('homeMenu');
